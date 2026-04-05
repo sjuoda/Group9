@@ -24,7 +24,7 @@
     </nav>
     
     <main>
-        <form action="Group9/color.php" method="POST">
+        <form action="color.php" method="POST">
             <p>
                 <label for="rows/cols"> Rows and Columns </lable>
                 <input type="number" name="size" id="size" min="1" max="26" required> 
