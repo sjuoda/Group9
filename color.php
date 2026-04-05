@@ -9,9 +9,11 @@
     <meta name="description"
         content="Website for group project for cs312 ">
     <link rel="stylesheet" type="text/css" href="style.css" >
+    
 </head>
 
 <body>
+    
     <header>
         <h1>Color Coordinator</h1>
     </header>
@@ -24,15 +26,17 @@
     </nav>
     
     <main>
-        <form action="color.php" method="POST">
+        <form id="coorForm" action="color.php" method="POST">
             <p>
-                <label for="rows/cols"> Rows and Columns </lable>
-                <input type="number" name="size" id="size" min="1" max="26" required> 
+                <label for="rowscols"> Rows and Columns </label>
+                <input type="number" name="rowscols" id="rowscols">
+                <span id="rowcolError" style="display: none;">Error: Rows/Columns size entered is out of range. Must be between 1 and 26 inclusive.</span> 
             </p>
 
             <p>
-                <label for="colors"> Number of Colors </lable>
-                <input type="number" name="color" id="color" min="1" max="10" required>
+                <label for="colors"> Number of Colors </label>
+                <input type="number" name="colors" id="colors">
+                <span id="colorError" style="display: none;">Error: Colors size entered is out of range. Must be between 1 and 10 inclusive.</span>
             </p>
 
             <input type="submit">
@@ -41,6 +45,8 @@
     <footer>
         <p>&#169 Group 9 Website - CS312 - CSU</p>
     </footer>
+
+    <script src="errors.js"> </script>
 </body>
 
 </html>
