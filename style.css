@@ -1,0 +1,101 @@
+/* 
+background colors: #0C309D #074620
+foreground colors: #CFDC1E # F8C5BF #CFCEF8
+ */
+
+
+
+main {
+    color: #CFDC1E;
+    background-color: #0C309D;
+    margin: 25px auto;
+    width: 1080px;
+}
+
+body {
+    background-color: #0C309D;
+    font-family: Helvetica, sans-serif, ;
+    margin: 0;
+}
+
+
+
+#indexMain {
+    color: #F8C5BF;
+    background-color: #074620;
+    margin: 25px auto;
+    width: 1080px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#indexMain p{
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+header {
+    text-align: center;
+    color: #CFDC1E;
+    padding: 10px;
+    font-size: larger;
+    font-style: oblique;
+}
+
+nav {
+    text-align: center;
+    background-color: #074620;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 1080px;
+    margin: 20px auto;
+}
+
+a {
+    text-decoration: none;
+    color: #CFCEF8;
+    text-shadow: 3px 1px #141259;
+}
+
+nav li {
+    display: inline;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 1000;
+    padding: 25px;
+
+}
+
+#logo{
+    display: flex;
+    margin: auto;
+}
+
+#team {
+    display: flex;
+}
+
+#t1, #t2, #t3, #t4 {
+    width: 200px;
+    margin-right: auto;
+}
+
+#t1 h2, #t2 h2, #t3 h2, #t4 h2 {
+    color: #F8C5BF;
+}
+
+#t1 img, #t2 img, #t3 img, #t4 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+footer {
+    color: #CFDC1E;
+    padding-left: 10px;
+    text-align: center;
+}
+
