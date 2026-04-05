@@ -20,8 +20,8 @@ body {
 
 
 #indexMain {
-    color: #F8C5BF;
-    background-color: #074620;
+    color: #074620;
+    background-color: #CFDC1E;
     margin: 25px auto;
     width: 1080px;
 }
@@ -45,7 +45,7 @@ header {
 
 nav {
     text-align: center;
-    background-color: #074620;
+    background-color: #CFDC1E;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 1080px;
@@ -54,8 +54,8 @@ nav {
 
 a {
     text-decoration: none;
-    color: #CFCEF8;
-    text-shadow: 3px 1px #141259;
+    color: #0C309D;
+    /* text-shadow: 3px 1px #141259; */
 }
 
 nav li {
