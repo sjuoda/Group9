@@ -24,7 +24,19 @@
     </nav>
     
     <main>
-        
+        <form action="Group9/color.php" method="POST">
+            <p>
+                <label for="rows/cols"> Rows and Columns </lable>
+                <input type="number" name="size" id="size" min="1" max="26" required> 
+            </p>
+
+            <p>
+                <label for="colors"> Number of Colors </lable>
+                <input type="number" name="color" id="color" min="1" max="10" required>
+            </p>
+
+            <input type="submit">
+        </form>
     </main>
     <footer>
         <p>&#169 Group 9 Website - CS312 - CSU</p>
