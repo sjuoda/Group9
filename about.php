@@ -37,10 +37,13 @@
             </div>
 
             <div id="t2">
-                <img src="sarunas1.jpg" alt="image of Sarunas Juodagalvis">
-                <h2>Sarunas Juodagalvis</h2>
-                <p>My name is Sarunas Juodagalvis and I am a senior Computer Science major with a concentration in Computing for
-                    Creatives.
+                <img src="AndrewB.jpg" alt="image of Andrew Beckman">
+                <h2>Andrew <br>Beckman</h2>
+                <p>
+                My name is Andrew Beckman and I am a senior majoring in Computer Science with a concentration in Networking and Security.
+                My background includes coursework in computer networks, cybersecurity, operating systems, and software development.
+                I am currently seeking entry-level cybersecurity opportunities.
+                In my free time, I enjoy spending time with family and friends, playing video games, car-related activities, and watching the Rockies.    
                 </p>
             </div>
 
