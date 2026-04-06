@@ -1,6 +1,13 @@
 /* 
-background colors: #0C309D #074620
-foreground colors: #CFDC1E # F8C5BF #CFCEF8
+colors used: #0C309D #CFDC1E #F8C5BF #CFCEF8 #074620
+
+contrast value: #0C309D to #F8C5BF 7.13
+contrast value: #0C309D to #CFCEF8 7.18
+contrast value: #0C309D to #CFDC1E 7.22
+
+contrast value: #CFDC1E to #0C309D 7.22
+contrast value: #CFDC1E to #074620 7.29
+
  */
 
 
@@ -37,7 +44,7 @@ h1 {
 
 header {
     text-align: center;
-    color: #CFDC1E;
+    color: #CFCEF8;
     padding: 10px;
     font-size: larger;
     font-style: oblique;
@@ -98,6 +105,6 @@ footer {
     text-align: center;
 }
 
-span {
+p span {
     color: #F8C5BF;
 }

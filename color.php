@@ -27,14 +27,13 @@
     
     <main>
         <form id="coorForm" action="color.php" method="POST">
+            <label for="rowscols"> Rows and Columns (1-26)</label></span>
             <p>
-                <label for="rowscols"> Rows and Columns </label>
                 <input type="number" name="rowscols" id="rowscols">
                 <span id="rowcolError" style="display: none;">Error: Rows/Columns size entered is out of range. Must be between 1 and 26 inclusive.</span> 
             </p>
-
+            <label for="colors"> Number of Colors (1-10)</label>
             <p>
-                <label for="colors"> Number of Colors </label>
                 <input type="number" name="colors" id="colors">
                 <span id="colorError" style="display: none;">Error: Colors size entered is out of range. Must be between 1 and 10 inclusive.</span>
             </p>
