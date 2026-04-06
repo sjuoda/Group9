@@ -48,10 +48,11 @@
             </div>
 
             <div id="t3">
-                <img src="sarunas1.jpg" alt="image of Sarunas Juodagalvis">
-                <h2>Sarunas Juodagalvis</h2>
-                <p>My name is Sarunas Juodagalvis and I am a senior Computer Science major with a concentration in Computing for
-                    Creatives. 
+                <img src="EvanW.jpg" alt="image of Evan Waselkow">
+                <h2>Evan Waselkow</h2>
+                <p>I am a sophomore computer science student at Colorado State University. I aim to succeed at making a good program for this class 
+                    and will help my groupmates succeed when they need. I have completed four semesters previously, and I hope to do well with my group. 
+                    Outside of school, I like to work out, play video games, and build LEGOs. 
                 </p>
             </div>
 
