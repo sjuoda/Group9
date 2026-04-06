@@ -40,6 +40,24 @@
 
             <input type="submit">
         </form>
+
+    <?php 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        $rows = $_POST["rowscols"];
+        $cols = $_POST["rowscols"];
+
+        echo "<form action'print.php' method='GET'>";
+
+        echo "<table border='1'>";
+        for ($r = 0; $r < $rows; $r++) {
+            echo "<tr>";
+            for ($c = 0; $c < $cols, $c++) {
+                echo "<td>";
+                echo "<select name = "cell_{$r}_{$c}'>";
+                
+            
+        
     </main>
     <footer>
         <p>&#169 Group 9 Website - CS312 - CSU</p>
