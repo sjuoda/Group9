@@ -55,9 +55,24 @@
             for ($c = 0; $c < $cols, $c++) {
                 echo "<td>";
                 echo "<select name = "cell_{$r}_{$c}'>";
-                
-            
-        
+                echo "<option value='Red'>Red</option>";
+                echo "<option value='Blue'>Blue</option>";
+                echo "<option value='Green'>Green</option>";
+                echo "</select>";
+                echo "</td>";
+
+            }
+            echo "</tr>";
+        }
+        echo "</table>"
+
+       echo "<input type='hidden' name='rows' value='{$rows}'>";
+       echo "<input type='hidden' name='cols' value='{$cols}'>";
+       echo "<button type='submit'>Print View</button>";
+       echo "</form>";
+    }
+    ?>
+    
     </main>
     <footer>
         <p>&#169 Group 9 Website - CS312 - CSU</p>
