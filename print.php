@@ -16,4 +16,25 @@ function render_table($rows, $cols, $prefix = 'cell') {
     echo "</table>;
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8>
+  <title>Print View - Color Coordinator</title>
+  <link rel="stylesheet" href="print.css">
+</head>
+<body>
+
+<div class="header">
+  <img src="colored-logo.png" alt="Company Logo" class="logo"> 
+  <h1>Group 9 - Color Coordinator</h1>
+</div>
+
+<h2>Table 1</h2>
+<?php render_tables($rows, $cols, "cell"); ?>
+
+<h2>Table 2</h2>
+<?php render_tables($rows, $cols, "cell2"); ?>
     
+</body>
+</html>
