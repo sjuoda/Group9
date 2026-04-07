@@ -19,14 +19,19 @@ function render_table($rows, $cols, $prefix = 'cell') {
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8>
+  <meta charset="utf-8">
+  <meta name="author" content="Evan Waselkow">
+  <meta name="keywords" content="CSU, Computer Science, CS 312, CS312, Cats">
+  <meta name="description"
+        content="Color coordinator table for our group project">
   <title>Print View - Color Coordinator</title>
-  <link rel="stylesheet" href="print.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="header">
   <img src="colored-logo.png" alt="Company Logo" class="logo"> 
+  
   <h1>Group 9 - Color Coordinator</h1>
 </div>
 
