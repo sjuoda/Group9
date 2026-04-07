@@ -27,7 +27,7 @@
     
     <main>
         <form id="coorForm" action="color.php" method="POST">
-            <label for="rowscols"> Rows and Columns (1-26)</label></span>
+            <label for="rowscols"> Rows and Columns (1-26)</label>
             <p>
                 <input type="number" name="rowscols" id="rowscols">
                 <span id="rowcolError" style="display: none;">Error: Rows/Columns size entered is out of range. Must be between 1 and 26 inclusive.</span> 
@@ -45,9 +45,9 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $rows = $_POST["rowscols"];
-        $cols = $_POST["rowscols"];
+        $cols = $_POST["colors"];
 
-        echo "<form action'print.php' method='GET'>";
+        echo "<form action='print.php' method='GET'>";
 
         echo "<table border='1'>";
         for ($r = 0; $r < $rows; $r++) {

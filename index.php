@@ -23,7 +23,7 @@
         </ul>
     </nav>
 
-    <img id="logo" src="colored-logo.png" alt="Company logo" width="200">
+    <img id="logo" src="colored-logo.png" alt="Company logo">
     
     <main id="indexMain">
         <h1> Welcome</h1>

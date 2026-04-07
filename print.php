@@ -1,5 +1,4 @@
 <?php
-require 'color.php';
 $rows = isset($_GET['rows']) ? intval($_GET['rows']) : 3;
 $cols = isset($_GET['cols']) ? intval($_GET['cols']) : 3;
 
@@ -26,12 +25,12 @@ function render_table($rows, $cols, $prefix = 'cell') {
   <meta name="description"
         content="Color coordinator table for our group project">
   <title>Print View - Color Coordinator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 <div class="header">
-  <img src="colored-logo.png" alt="Company Logo" class="logo"> 
+  <img id="logo" src="colored-logo.png" alt="Company Logo" class="logo"> 
   
   <h1>Group 9 - Color Coordinator</h1>
 </div>
