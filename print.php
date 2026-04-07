@@ -1,19 +1,20 @@
 <?php
-$rows = isset($_GET['rows']) ? intval($_GET['rows']} : 3;
-$cols = isset($_GET['cols']) ? intval($_GET['cols']} : 3;
+require 'color.php';
+$rows = isset($_GET['rows']) ? intval($_GET['rows']) : 3;
+$cols = isset($_GET['cols']) ? intval($_GET['cols']) : 3;
 
 function render_table($rows, $cols, $prefix = 'cell') {
   echo "<table>";
   for ($r = 0; $r < $rows; $r++) {
     echo "<tr>";
     for ($c = 0; $c < $cols; $c++) {
-      $key = "{prefix}_{$r}_{$c}";
-      $value = isset($_GET[$key]) ? htmlspecialchars($_GE[$key]) : '';
-      echo "<td>$value</td>;
+      $key = "{$prefix}_{$r}_{$c}";
+      $value = isset($_GET[$key]) ? htmlspecialchars($_GET[$key]) : '';
+      echo "<td>$value</td>";
       }
-      echo "</tr>"
+      echo "</tr>";
     }
-    echo "</table>;
+    echo "</table>";
 }
 ?>
 <!DOCTYPE html>
@@ -36,10 +37,10 @@ function render_table($rows, $cols, $prefix = 'cell') {
 </div>
 
 <h2>Table 1</h2>
-<?php render_tables($rows, $cols, "cell"); ?>
+<?php render_table($rows, $cols, "cell"); ?>
 
 <h2>Table 2</h2>
-<?php render_tables($rows, $cols, "cell2"); ?>
+<?php render_table($rows, $cols, "cell2"); ?>
     
 </body>
 </html>
