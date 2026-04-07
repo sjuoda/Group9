@@ -52,9 +52,9 @@
         echo "<table border='1'>";
         for ($r = 0; $r < $rows; $r++) {
             echo "<tr>";
-            for ($c = 0; $c < $cols, $c++) {
+            for ($c = 0; $c < $cols; $c++) {
                 echo "<td>";
-                echo "<select name = "cell_{$r}_{$c}'>";
+                echo "<select name = 'cell_{$r}_{$c}'>";
                 echo "<option value='Red'>Red</option>";
                 echo "<option value='Blue'>Blue</option>";
                 echo "<option value='Green'>Green</option>";
@@ -64,7 +64,7 @@
             }
             echo "</tr>";
         }
-        echo "</table>"
+        echo "</table>";
 
        echo "<input type='hidden' name='rows' value='{$rows}'>";
        echo "<input type='hidden' name='cols' value='{$cols}'>";
