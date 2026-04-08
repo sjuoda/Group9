@@ -44,7 +44,7 @@
     <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $rows = $_POST["rowscols"];
+        $rows = $_POST["colors"];
         $cols = 2;
 
         echo "<form action='print.php' method='GET'>";
