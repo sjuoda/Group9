@@ -75,6 +75,7 @@
             echo "</tr>";
         }
         echo "</table>";
+        echo "<p id='duplicateMessage' style='color:#F8C5BF;'></p>";
         
         $n = $_POST["rowscols"];
         echo "<h2>Coordinate Grid</h2>";
@@ -102,7 +103,7 @@
         }
         echo "</table>";
 
-        echo "<p id='duplicateMessage' style='color:#F8C5BF;'></p>";
+        
         echo "<input type='hidden' name='rows' value='{$rows}'>";
         echo "<input type='hidden' name='cols' value='{$rows}'>";
         echo "<button type='submit'>Print View</button>";
