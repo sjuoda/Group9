@@ -76,7 +76,7 @@
         }
         echo "</table>";
 
-        echo "<p id='duplicateMessage' style='color:red;'></p>";
+        echo "<p id='duplicateMessage' style='color:#F8C5BF;'></p>";
 
        echo "<input type='hidden' name='rows' value='{$rows}'>";
        echo "<input type='hidden' name='cols' value='{$cols}'>";
