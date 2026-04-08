@@ -20,7 +20,8 @@ main {
 }
 
 table {
-    width: 1000px;
+    width: 1050px;
+    margin-top: 15px;
 }
 
 body {
