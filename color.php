@@ -49,7 +49,7 @@
 
         echo "<form action='print.php' method='GET'>";
 
-        echo "<table border='1'>";
+        echo "<table border='1' id='tb1'>";
 
         $colorList = ["Red","Orange","Yellow","Green","Blue","Purple","Grey","Brown","Black","Teal"];
         
