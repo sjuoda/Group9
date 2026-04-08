@@ -74,9 +74,10 @@ nav li {
 
 }
 
-#logo{
-    display: flex;
+#logo {
+    display: block;
     margin: auto;
+    width: 200px;
 }
 
 #team {

@@ -27,7 +27,7 @@
     
     <main>
         <form id="coorForm" action="color.php" method="POST">
-            <label for="rowscols"> Rows and Columns (1-26)</label></span>
+            <label for="rowscols"> Rows and Columns (1-26)</label>
             <p>
                 <input type="number" name="rowscols" id="rowscols">
                 <span id="rowcolError" style="display: none;">Error: Rows/Columns size entered is out of range. Must be between 1 and 26 inclusive.</span> 
@@ -44,27 +44,39 @@
     <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        $rows = $_POST["rowscols"];
-        $cols = $_POST["rowscols"];
+        $rows = $_POST["colors"];
+        $cols = 2;
 
-        echo "<form action'print.php' method='GET'>";
+        echo "<form action='print.php' method='GET'>";
 
         echo "<table border='1'>";
-        for ($r = 0; $r < $rows; $r++) {
-            echo "<tr>";
-            for ($c = 0; $c < $cols, $c++) {
-                echo "<td>";
-                echo "<select name = "cell_{$r}_{$c}'>";
-                echo "<option value='Red'>Red</option>";
-                echo "<option value='Blue'>Blue</option>";
-                echo "<option value='Green'>Green</option>";
-                echo "</select>";
-                echo "</td>";
 
+        $colorList = ["Red","Orange","Yellow","Green","Blue","Purple","Grey","Brown","Black","Teal"];
+        
+        for ($r = 0; $r < $rows; $r++) {
+            $defaultColor = $colorList[$r];
+
+            echo "<tr>";
+            //Left column
+            echo "<td style='width:20%;'>";
+            echo "<select name='color_$r' class='colorDropdown'>";
+            foreach ($colorList as $color) {
+
+                $selected = ($color == $defaultColor) ? "selected" : "";
+
+                echo "<option value='$color' $selected>$color</option>";
             }
+            echo "</select>";
+            echo "</td>";
+            //Right column
+            echo "<td style='width:80%;'>";
+            echo $defaultColor;
+            echo "</td>";
             echo "</tr>";
         }
-        echo "</table>"
+        echo "</table>";
+
+        echo "<p id='duplicateMessage' style='color:#F8C5BF;'></p>";
 
        echo "<input type='hidden' name='rows' value='{$rows}'>";
        echo "<input type='hidden' name='cols' value='{$cols}'>";

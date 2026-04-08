@@ -22,3 +22,25 @@ function validateForm(event){
 }
 
 form.addEventListener("submit", validateForm);
+
+//Duplicate check 4.3
+document.addEventListener("change", function(event){
+
+    if(event.target.className == "colorDropdown"){
+        let dropdowns = document.getElementsByClassName("colorDropdown");
+        let message = document.getElementById("duplicateMessage");
+        let usedColors = [];
+
+        for(let i = 0; i < dropdowns.length; i++){
+            if(usedColors.includes(dropdowns[i].value)){
+                message.textContent = "Error: Color is already in use.";
+                event.target.selectedIndex = 0;
+                return;
+            } 
+            else {
+                usedColors.push(dropdowns[i].value);
+            }
+        }
+        message.textContent = "";
+    }
+});
