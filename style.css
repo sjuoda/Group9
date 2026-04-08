@@ -19,6 +19,10 @@ main {
     width: 1080px;
 }
 
+table {
+    width: 1000px;
+}
+
 body {
     background-color: #0C309D;
     font-family: Helvetica, sans-serif, ;
