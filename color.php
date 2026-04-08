@@ -3,7 +3,7 @@
 
 <head>
     <title>Color Coordinator</title>
-    <meta charset="utf 8">
+    <meta charset="utf-8">
     <meta name="author" content="Sarunas Juodagalvis ">
     <meta name="keywords" content="CSU, Computer Science, CS 312, CS312, Cats">
     <meta name="description"
@@ -75,13 +75,38 @@
             echo "</tr>";
         }
         echo "</table>";
+        
+        $n = $_POST["rowscols"];
+        echo "<h2>Coordinate Grid</h2>";
+        echo "<table border='1' class='grid'>";
+
+        for ($i = 0; $i <= $n; $i++) {
+            echo "<tr>";
+            for ($j = 0; $j <= $n; $j++) {
+                echo "<td>";
+                if ($i == 0 && $j == 0) {
+                    echo "";
+                }
+                elseif($i == 0) {
+                    echo chr(64 + $j);
+                }
+                elseif($j == 0) {
+                    echo $i;
+                }
+                else{
+                    echo "";
+                }
+                echo "</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
 
         echo "<p id='duplicateMessage' style='color:#F8C5BF;'></p>";
-
-       echo "<input type='hidden' name='rows' value='{$rows}'>";
-       echo "<input type='hidden' name='cols' value='{$cols}'>";
-       echo "<button type='submit'>Print View</button>";
-       echo "</form>";
+        echo "<input type='hidden' name='rows' value='{$rows}'>";
+        echo "<input type='hidden' name='cols' value='{$rows}'>";
+        echo "<button type='submit'>Print View</button>";
+        echo "</form>";
     }
     ?>
     
