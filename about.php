@@ -57,10 +57,11 @@
             </div>
 
             <div id="t4">
-                <img src="sarunas1.jpg" alt="image of Sarunas Juodagalvis">
-                <h2>Sarunas Juodagalvis</h2>
-                <p>My name is Sarunas Juodagalvis and I am a senior Computer Science major with a concentration in Computing for
-                    Creatives. Welcome to my website.
+                <img src="bradylan.jpg" alt="image of Brady Langerman">
+                <h2>Brady Langerman</h2>
+                <p>Hello, my name is Brady Langerman and I am a senior Computer Scientist at Colorado State University. I'm passionate about 
+                    website, game, cybersecurity, and software desigin. My interests outside of CS consist of hiking, working out, video games, 
+                    hockey, and pokemon. My goal is to work well with my team members and create an aesthetic website.
                 </p>
             </div>
 
