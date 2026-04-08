@@ -69,8 +69,8 @@
             echo "</select>";
             echo "</td>";
             //Right column
-            echo "<td style='width:80%;'>";
-            echo $defaultColor;
+            echo "<td style='width:80%; background-color: ". $defaultColor . ";'>";
+            // echo $defaultColor;
             echo "</td>";
             echo "</tr>";
         }
