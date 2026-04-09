@@ -52,14 +52,19 @@ function render_table($rows, $cols, $prefix = 'cell') {
 <?php
 
 function render_color_list() {
-    echo "<table border='1'>";
-    echo "<tr><th>Selected Colors</th></tr>";
+    echo "<table border='1' style='width:95%;'>";
+    //echo "<tr><th></th></tr>";
 
     foreach ($_GET as $key => $value) {
         if (strpos($key, "color_") === 0) {
-            echo "<tr><td>" . htmlspecialchars($value) . "</td></tr>";
+            echo "<tr>";
+            echo "<td style='width:20%'>" . htmlspecialchars($value) . "</td>";
+            echo "<td style='width:80%'></tr>";
+            echo "</tr>";
         }
+        
     }
+    
 
     echo "</table>";
 }
