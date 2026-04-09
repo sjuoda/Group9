@@ -3,7 +3,7 @@ $rows = isset($_GET['rows']) ? intval($_GET['rows']) : 3;
 $cols = isset($_GET['cols']) ? intval($_GET['cols']) : 3;
 
 function render_table($rows, $cols, $prefix = 'cell') {
-    echo "<table border='1'>";
+    echo "<table style='display:block;'>";
 
     echo "<tr><th></th>";
     for ($c = 0; $c < $cols; $c++) {
