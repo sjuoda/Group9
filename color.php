@@ -70,7 +70,7 @@
             echo "</select>";
             echo "</td>";
             //Right column
-            echo "<td style='width:80%; background-color: $defaultColor;' class='colorPreview'>";
+            echo "<td style='width:80%; background-color: $;' class='colorPreview'>";
             // echo $defaultColor;
             echo "</td>";
             echo "</tr>";

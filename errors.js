@@ -36,7 +36,7 @@ function checkDuplicateColors(event){
             message.style.display = "block";
             message.textContent = "Error: Color is already in use.";
             event.target.value = event.target.dataset.previous;
-            cell.style.backgroundColor = event.target.value;
+            //cell.style.backgroundColor = event.target.value;
             return;
         } 
         else {
@@ -45,7 +45,7 @@ function checkDuplicateColors(event){
     }
     message.style.display = "none";
     event.target.dataset.previous = event.target.value;
-    cell.style.backgroundColor = event.target.value;
+    //cell.style.backgroundColor = event.target.value;
 }
 
 let dropdowns = document.getElementsByClassName("colorDropdown");
