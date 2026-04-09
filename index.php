@@ -29,12 +29,10 @@
         <h1> Welcome</h1>
 
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed porttitor risus, aliquam finibus mi. 
-            Nulla sagittis feugiat scelerisque. Aenean ut ante arcu. Phasellus eleifend, massa nec mattis ultrices, dolor 
-            orci ullamcorper ligula, eget ornare diam justo eget ante. Sed tristique nibh et justo consectetur sodales. 
-            Aenean rhoncus enim at orci porta, et consequat metus pharetra. Nam iaculis, odio non varius auctor, eros diam 
-            consequat ipsum, eget varius diam tellus in odio. Nunc porttitor elit at justo euismod, vel auctor elit vulputate. 
-            Aliquam congue, nisl sit amet efficitur fermentum, risus orci hendrerit massa, ut auctor nisi felis vitae massa.
+            Hi there. We are Group 9 for CS-312. We have four team members in our team consisting of Sarunas, Brady, Andrew, and Evan.
+            This is our homepage, but this website also has an about page where you can see our team members and our bios. We also have
+            a color coordinator, where you choose how many colors and grids you want, and our website generates them for you. Our website
+            has the ability to make the color coordinator and the graph printable for you.
         </p>
         
     </main>
