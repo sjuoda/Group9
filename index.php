@@ -3,7 +3,7 @@
 
 <head>
     <title>Group 9 - Home</title>
-    <meta charset="utf 8">
+    <meta charset="utf-8">
     <meta name="author" content="Sarunas Juodagalvis ">
     <meta name="keywords" content="CSU, Computer Science, CS 312, CS312, Cats">
     <meta name="description"
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" >
 </head>
 
-<body #id="indexBody">
+<body id="indexBody">
     <header>
         <h1>CLOUD 9 COLORS</h1>
     </header>

@@ -3,7 +3,7 @@
 
 <head>
     <title>Group 9 - About</title>
-    <meta charset="utf 8">
+    <meta charset="utf-8">
     <meta name="author" content="Sarunas Juodagalvis ">
     <meta name="keywords" content="CSU, Computer Science, CS 312, CS312, Cats">
     <meta name="description"
