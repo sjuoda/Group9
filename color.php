@@ -45,6 +45,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $rows = $_POST["colors"];
+        $rowscols = $_POST["rowscols"];
         $cols = 2;
 
         echo "<form action='print.php' method='GET'>";
@@ -104,8 +105,8 @@
         echo "</table>";
 
         
-        echo "<input type='hidden' name='rows' value='{$rows}'>";
-        echo "<input type='hidden' name='cols' value='{$rows}'>";
+        echo "<input type='hidden' name='rows' value='{$rowscols}'>";
+        echo "<input type='hidden' name='cols' value='{$rowscols}'>";
         echo "<button type='submit'>Print View</button>";
         echo "</form>";
     }
