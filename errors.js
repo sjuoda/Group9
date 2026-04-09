@@ -24,23 +24,35 @@ function validateForm(event){
 form.addEventListener("submit", validateForm);
 
 //Duplicate check 4.3
-document.addEventListener("change", function(event){
+function checkDuplicateColors(event){
 
-    if(event.target.className == "colorDropdown"){
-        let dropdowns = document.getElementsByClassName("colorDropdown");
-        let message = document.getElementById("duplicateMessage");
-        let usedColors = [];
+    let dropdowns = document.getElementsByClassName("colorDropdown");
+    let message = document.getElementById("duplicateMessage");
+    let cell = event.target.parentElement.nextElementSibling;
+    let usedColors = [];
 
-        for(let i = 0; i < dropdowns.length; i++){
-            if(usedColors.includes(dropdowns[i].value)){
-                message.textContent = "Error: Color is already in use.";
-                event.target.selectedIndex = 0;
-                return;
-            } 
-            else {
-                usedColors.push(dropdowns[i].value);
-            }
+    for(let i = 0; i < dropdowns.length; i++){
+        if(usedColors.includes(dropdowns[i].value)){
+            message.style.display = "block";
+            message.textContent = "Error: Color is already in use.";
+            event.target.value = event.target.dataset.previous;
+            cell.style.backgroundColor = event.target.value;
+            return;
+        } 
+        else {
+            usedColors.push(dropdowns[i].value);
         }
-        message.textContent = "";
     }
-});
+    message.style.display = "none";
+    event.target.dataset.previous = event.target.value;
+    cell.style.backgroundColor = event.target.value;
+}
+
+let dropdowns = document.getElementsByClassName("colorDropdown");
+    for(let i = 0; i < dropdowns.length; i++){
+        dropdowns[i].dataset.previous = dropdowns[i].value;
+        dropdowns[i].addEventListener("focus", function(){
+            this.dataset.previous = this.value;
+        });
+        dropdowns[i].addEventListener("change", checkDuplicateColors);
+}
