@@ -43,12 +43,12 @@ function render_table($rows, $cols, $prefix = 'cell') {
 
 <div class="print-container">
 <div class="header">
-  <img src="blackwhite-logo.png" alt="Company Logo" width="100" class="logo"> 
-  <h1>Group 9 - Color Coordinator</h1>
+  <img src="blackwhite-logo2.png" alt="Company Logo" height="50" width="300" class="logo"> 
+  <!-- <h1>Group 9 - Color Coordinator</h1> -->
 </div>
 
 
-<h2>Table 1 - Selected Colors</h2>
+<h2>Color Selection</h2>
 <?php
 
 function render_color_list() {
@@ -67,7 +67,7 @@ function render_color_list() {
 render_color_list();
 ?>
 
-<h2>Table 2 - Coordinate Grid</h2>
+<h2>Coordinate Grid</h2>
 <?php render_table($rows, $cols, "cell"); ?>
 
 </div>

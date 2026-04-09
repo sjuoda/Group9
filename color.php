@@ -53,7 +53,7 @@
         echo "<table border='1' id='tb1'>";
 
         $colorList = ["Red","Orange","Yellow","Green","Blue","Purple","Grey","Brown","Black","Teal"];
-        
+        echo "<h2>Color Selection</h2>";
         for ($r = 0; $r < $rows; $r++) {
             $defaultColor = $colorList[$r];
 
