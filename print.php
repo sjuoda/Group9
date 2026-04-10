@@ -44,7 +44,7 @@ function render_table($rows, $cols, $prefix = 'cell') {
 <div class="print-container">
 <div class="header">
   <img src="blackwhite-logo2.png" alt="Company Logo" height="50" width="300" class="logo"> 
-  <!-- <h1>Group 9 - Color Coordinator</h1> -->
+  <h1>Cloud 9 Colors</h1>
 </div>
 
 
