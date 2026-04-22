@@ -58,22 +58,29 @@
             $defaultColor = $colorList[$r];
 
             echo "<tr>";
-            //Left column
-            echo "<td style='width:20%;'>";
+
+            
+            $checked = ($r == 0) ? "checked" : "";
+            echo "<td>";
+            echo "<input type='radio' name='activeColor' value='$r' $checked>";
+            echo "</td>";
+
+            echo "<td>";
             echo "<select name='color_$r' class='colorDropdown'>";
             foreach ($colorList as $color) {
 
                 $selected = ($color == $defaultColor) ? "selected" : "";
-
+                
                 echo "<option value='$color' $selected>$color</option>";
             }
             echo "</select>";
             echo "</td>";
-            //Right column
-            echo "<td style='width:80%; background-color: $;' class='colorPreview'>";
-            // echo $defaultColor;
+
+            echo "<td style='background-color: $defaultColor;' class='colorPreview'>";
             echo "</td>";
+
             echo "</tr>";
+
         }
         echo "</table>";
         echo "<p id='duplicateMessage' style='color:#F8C5BF;'></p>";
