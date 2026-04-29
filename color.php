@@ -160,6 +160,22 @@
             preview.textContent = coordinateMap[rowIndex].join(", ");
         });
     });
+
+    // 1.4
+    document.querySelectorAll(".colorDropdown").forEach((dropdown, rowIndex) => {
+        dropdown.addEventListener("change", function () {
+            const updateNewColor = this.value;
+            const coords = coordinateMap[rowIndex] || [];
+
+            coords.forEach(coord => {
+                const cell = document.querySelector(`[data-coord="${coord}"]`).parentElement;
+                cell.style.backgroundColor = updateNewColor;
+            });
+
+            const preview = document.querySelectorAll(".colorPreview")[rowIndex];
+            preview.style.backgroundColor = updateNewColor;
+        });
+    });
 </script>
 </body>
 
