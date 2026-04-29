@@ -100,7 +100,8 @@
                     echo $i;
                 }
                 else{
-                    echo "";
+                    $coord = chr(64 + $j) . $i;
+                    echo "<span class='paintCell' data-coord='$coord'></span>";
                 }
                 echo "</td>";
             }
@@ -122,6 +123,44 @@
     </footer>
 
     <script src="errors.js"> </script>
+
+    <script>
+    const coordinateMap = {};
+
+    document.querySelectorAll(".colorPreview").forEach((row, i) => {
+        coordinateMap[i] = [];
+    });
+
+    document.querySelectorAll(".paintCell").forEach(cell => {
+        cell.parentElement.addEventListener("click", function () {
+            const active = document.querySelector("input[name='activeColor']:checked");
+            const rowIndex = active.value;
+
+            const dropdown = document.querySelector(`select[name='color_${rowIndex}']`); 
+            const chosenColor = dropdown.value;
+            
+            this.style.backgroundColor = chosenColor;
+
+            const coord = cell.dataset.coord;
+
+            if (!coordinateMap[rowIndex].includes(coord)) {
+                coordinateMap[rowIndex].push(coord);
+            }
+
+            coordinateMap[rowIndex].sort((a,b) => {
+                const letterA = a.charCodeAt(0);
+                const letterB = b.charCodeAt(0);
+
+                if(letterA !== letterB) return letterA - letterB;
+
+                return parseInt(a.slice(1)) - parseInt(b.slice(1));
+            });
+
+            const preview = document.querySelectorAll(".colorPreview")[rowIndex];
+            preview.textContent = coordinateMap[rowIndex].join(", ");
+        });
+    });
+</script>
 </body>
 
 </html>
