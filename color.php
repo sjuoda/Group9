@@ -183,6 +183,7 @@
             passColor.className = "removedColors";
             printForm.appendChild(passColor);
         });
+    });
 
     // 1.4
     document.querySelectorAll(".colorDropdown").forEach((dropdown, rowIndex) => {
