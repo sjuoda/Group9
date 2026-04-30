@@ -161,6 +161,29 @@
         });
     });
 
+    document.querySelector("button[type='submit']").addEventListener("click", function() {
+        const printForm = document.querySelector("form[action='print.php']");
+
+        document.querySelectorAll(".removedColors").forEach(color => color.remove());
+
+        for(const [rowIndex, coords] of Object.entries(coordinateMap)) {
+            const removedColor = document.createElement("input");
+            removedColor.type = "hidden";
+            removedColor.name = "coords_" + rowIndex;
+            removedColor.value = coords.join(",");
+            removedColor.className = "removedColors";
+            printForm.appendChild(removedColor);
+        }
+
+        document.querySelectorAll(".colorDropdown").forEach((dropdown, i) => {
+            const passColor = document.createElement("input");
+            passColor.type = "hidden";
+            passColor.name = "colorname_" + i;
+            passColor.value = dropdown.value;
+            passColor.className = "removedColors";
+            printForm.appendChild(passColor);
+        });
+
     // 1.4
     document.querySelectorAll(".colorDropdown").forEach((dropdown, rowIndex) => {
         dropdown.addEventListener("change", function () {

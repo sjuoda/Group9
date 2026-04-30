@@ -2,6 +2,8 @@
 $rows = isset($_GET['rows']) ? intval($_GET['rows']) : 3;
 $cols = isset($_GET['cols']) ? intval($_GET['cols']) : 3;
 
+$colorCodesInHex = ["Red" => "#FF0000", "Orange" => "#FFA500 ", "Yellow" => "#FFFF00", "Green" => "#008000", "Blue" => "#0000FF", "Purple" => "#800080", "Grey" => "#808080", "Brown" => "#A52A2A", "Black" => "#000000", "Teal" => "#008080"];
+
 function render_table($rows, $cols, $prefix = 'cell') {
     echo "<table style='display:block;'>";
 
@@ -51,25 +53,41 @@ function render_table($rows, $cols, $prefix = 'cell') {
 <h2>Color Selection</h2>
 <?php
 
-function render_color_list() {
+function render_color_list($colorCodesInHex) {
     echo "<table border='1' style='width:95%;'>";
+
+    $i = 0;
+
+    while (isset($_GET["colorname_$i"])){
+        $name = htmlspecialchars($_GET["colorname_$i"]);
+        $coords = isset($_GET["coords_$i"]) ? htmlspecialchars($_GET["coords_$i"]) : "";
+        $hexValues = $colorCodesInHex[$name];
+
+        echo "<tr>";
+            echo "<td style='width:20%'>$name - $hexValues </td>";
+            echo "<td style='width:80%'>$coords</td>";
+            echo "</tr>";
+        $i++;
+
+    }
+    echo "</table>";
     //echo "<tr><th></th></tr>";
 
-    foreach ($_GET as $key => $value) {
-        if (strpos($key, "color_") === 0) {
-            echo "<tr>";
-            echo "<td style='width:20%'>" . htmlspecialchars($value) . "</td>";
-            echo "<td style='width:80%'></tr>";
-            echo "</tr>";
-        }
+    // foreach ($_GET as $key => $value) {
+    //     if (strpos($key, "color_") === 0) {
+    //         echo "<tr>";
+    //         echo "<td style='width:20%'>" . htmlspecialchars($value) . "</td>";
+    //         echo "<td style='width:80%'></tr>";
+    //         echo "</tr>";
+    //     }
         
-    }
+    // }
     
 
-    echo "</table>";
+    // echo "</table>";
 }
 
-render_color_list();
+render_color_list($colorCodesInHex);
 ?>
 
 <h2>Coordinate Grid</h2>
