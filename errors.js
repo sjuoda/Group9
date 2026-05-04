@@ -1,8 +1,8 @@
 let form = document.getElementById("coorForm");
 
 function validateForm(event){
-    let size = form.rowscols.value;
-    let color = form.colors.value;
+    let size = parseInt(form.rowscols.value);
+    let color = parseInt(form.colors.value);
 
     if (size < 1 || size > 26) {
         event.preventDefault();
@@ -12,10 +12,10 @@ function validateForm(event){
         document.getElementById("rowcolError").style.display = "none";
     }
 
-    if (color < 1 || color > 10) {
+    if (color < 1 || color > COLORS_SIZE) {
         event.preventDefault();
         document.getElementById("colorError").style.display = "block";
-        console.log("Error: Size entered is out of range. Must be between 1 and 10 inclusive.");
+        console.log("Error: Size entered is out of range. Must be between 1 and " + COLORS_SIZE + " inclusive.");
     } else {
         document.getElementById("colorError").style.display = "none";
     }
